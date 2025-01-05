@@ -1,7 +1,10 @@
 <h1>Update Task</h1>
     <form method="POST">
+        {% comment %} below csrf token allow to interact with the database and secure the data with csrf {% endcomment %}
         {% csrf_token %}
+        {% comment %} This will return task as a paragraph  .as_p {% endcomment %}
         {{ task.as_p }}
+
         <button type="submit">Update Task</button>
         <button><a href="{% url 'tasks' %}">Cancel</a></button>
     </form>

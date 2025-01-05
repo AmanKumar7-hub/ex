@@ -1,5 +1,6 @@
 from django.db import models
 
+# this choice will help in selecting the status of the file status 
 STATUS_CHOICES = [
         ('incomplete', 'Incomplete'),
         ('complete', 'Complete'),
