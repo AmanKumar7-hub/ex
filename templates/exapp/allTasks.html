@@ -2,9 +2,14 @@
     <ul>
         {% for task in tasks %}
             <li>
-                <strong>{{ task.title }}</strong>: {{ task.description }}
-                <a href="{% url 'singleTask' task.id %}">View</a>
-                <a href="{% url 'update' task.id %}">Edit</a>
+                <strong>{{ task.title }}</strong>: &nbsp; {{ task.description }} &nbsp;
+                <button>
+                    <a href="{% url 'singleTask' task.id %}">View</a>
+                </button> &nbsp;
+                <button>
+                    <a href="{% url 'update' task.id %}">Edit</a>
+                </button>
+            
                 <form method="POST" action="{% url 'delete' task.id %}">
                     {% csrf_token %}
                     <button type="submit">Delete</button>

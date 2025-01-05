@@ -3,5 +3,5 @@
         {% csrf_token %}
         {{ task.as_p }}
         <button type="submit">Update Task</button>
-        <a href="{% url 'tasks' %}">Cancel</a>
+        <button><a href="{% url 'tasks' %}">Cancel</a></button>
     </form>
